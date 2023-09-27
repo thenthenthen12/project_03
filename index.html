@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위드굿즈</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function(){
+
+            //1차 2차메뉴 스크립트
+            let depth1 = $('.slide_menu .inner .depth_01 > li > a')
+            let depth2 = $('.slide_menu .inner .depth_01 > li > .depth_02 li a')
+            let menuButton = $('#wrap header .inner .menu_button')
+
+
+            depth2.mouseenter(function(){
+                $(this).stop().animate({
+                    'right' : '-20px'
+                })
+            })
+            depth2.mouseleave(function(){
+                $(this).stop().animate({
+                    'right' : '0px'
+                })
+            })
+
+            depth1.mouseenter(function(){
+                $(this).next().stop().slideDown(600)
+            })
+            $('.slide_menu .inner .depth_01 > li > .depth_02').mouseleave(function(){
+                $('.slide_menu .inner .depth_01 > li > .depth_02').stop().slideUp(600)
+            })
+
+            menuButton.mouseenter(function(){
+                $('.slide_menu').css({
+                    'left' : '-10px'
+                })
+            })
+            $('.slide_menu').mouseleave(function(){
+                $(this).css({
+                    'left' : '-2000px'
+                })
+            })
+
+            // 메인비주얼 스크립트
+
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+
+            let slideImage =$('.section_01 .swiper .swiper-wrapper .swiper-slide a img')
+
+            let slideInfo1 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(1) a div h3:first-child')
+            let slideInfo12 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(1) a div h3:nth-child(2)')
+            let slideInfo13 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(1) a div p')
+            slideImage.mouseenter(function(){
+                slideInfo1.css({
+                    'right' : '200px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo1.css({
+                    'right' : '400px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo12.css({
+                    'right' : '435px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo12.css({
+                    'right' : '600px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo13.css({
+                    'right' : '470px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo13.css({
+                    'right' : '600px',
+                    'opacity' : '0'
+                })
+            })
+
+
+
+            let slideInfo2 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(2) a div h3:first-child')
+            let slideInfo22 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(2) a div h3:nth-child(2)')
+            let slideInfo23 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(2) a div p')
+            slideImage.mouseenter(function(){
+                slideInfo2.css({
+                    'right' : '270px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo2.css({
+                    'right' : '400px',
+                    'opacity' : '0'
+                })
+            })
+
+            slideImage.mouseenter(function(){
+                slideInfo22.css({
+                    'right' : '270px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo22.css({
+                    'right' : '400px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo23.css({
+                    'right' : '270px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo23.css({
+                    'right' : '400px',
+                    'opacity' : '0'
+                })
+            })
+
+
+            let slideInfo3 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(3) a div h3:first-child')
+            let slideInfo32 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(3) a div h3:nth-child(2)')
+            let slideInfo33 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(3) a div h3:nth-child(3)')
+            let slideInfo34 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(3) a div p')
+            slideImage.mouseenter(function(){
+                slideInfo3.css({
+                    'left' : '230px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo3.css({
+                    'left' : '400px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo32.css({
+                    'left' : '230px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo32.css({
+                    'left' : '400px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo33.css({
+                    'left' : '230px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo33.css({
+                    'left' : '400px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo34.css({
+                    'left' : '230px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo34.css({
+                    'left' : '400px',
+                    'opacity' : '0'
+                })
+            })
+
+
+
+
+            let slideInfo4 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(4) a div h3:first-child')
+            let slideInfo42 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(4) a div h3:nth-child(2)')
+            let slideInfo43 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(4) a div p')
+            slideImage.mouseenter(function(){
+                slideInfo4.css({
+                    'right' : '670px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo4.css({
+                    'right' : '800px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo42.css({
+                    'right' : '670px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo42.css({
+                    'right' : '800px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo43.css({
+                    'right' : '670px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo43.css({
+                    'right' : '800px',
+                    'opacity' : '0'
+                })
+            })
+
+
+
+            let slideInfo5 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(5) a div h3:first-child')
+            let slideInfo52 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(5) a div h3:nth-child(2)')
+            let slideInfo53 = $('.section_01 .swiper .swiper-wrapper .swiper-slide:nth-child(5) a div p')
+            slideImage.mouseenter(function(){
+                slideInfo5.css({
+                    'left' : '230px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo5.css({
+                    'left' : '400px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo52.css({
+                    'left' : '230px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo52.css({
+                    'left' : '400px',
+                    'opacity' : '0'
+                })
+            })
+            slideImage.mouseenter(function(){
+                slideInfo53.css({
+                    'left' : '230px',
+                    'opacity' : '1'
+                })
+            })
+            slideImage.mouseleave(function(){
+                slideInfo53.css({
+                    'left' : '400px',
+                    'opacity' : '0'
+                })
+            })
+
+            //section_02스크립트 시작
+            
+            let tabMenu = $('.section_02 .inner > div:first-child .menu li')
+            let tabItem = $('.section_02 .inner .list .item')
+
+            tabMenu.mouseenter(function(){
+                tabItem.removeClass('on')
+                tabItem.eq($(this).index()).addClass('on')
+                $(this).children().css({
+                    'right' : '-20px'
+                })
+                $(this).addClass('on')
+                tabItem.eq($(this).index()).css({
+                    'background' : 'transparent'
+                })
+            })
+            tabMenu.mouseleave(function(){
+                $(this).removeClass('on')
+                $(this).children().css({
+                    'right' : '0px'
+                })
+                tabItem.eq($(this).index()).css({
+                    'background' : '#003176'
+                })
+
+            })
+
+
+
+            //section_03 스크립트 시작
+            let bigImage = $('.section_03 .inner .cont .main a img')
+            let smallImage= $('.section_03 .inner .cont .subs > div:last-child div')
+            smallImage.mouseenter(function(){
+                let bigImageChange = $(this).find('img').attr('src')
+
+                bigImage.attr('src', bigImageChange)
+                $('.section_03 .inner .cont .subs > div').removeClass('on')
+                $('.section_03 .inner .cont .subs > div').eq($(this).index() +1).addClass('on')
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="up">
+        <div class="swiper mySwiper_03">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide">[가이드] 위드굿즈 교환가능기준 안내</a>
+                <a href="#" class="swiper-slide">모멘트텀블러M 일시 품절안내</a>
+                <a href="#" class="swiper-slide">제작 일정 지연 안내 공지 </a>
+                <a href="#" class="swiper-slide">500개 이상 주문 시 제작 기간은 문의해주세요.</a>
+                <a href="#" class="swiper-slide">[가이드] 굿즈 제작시 베이스굿즈별 이미지 사이즈 안내</a>
+                <a href="#" class="swiper-slide">위드굿즈의 특별한 회원혜택</a>
+                <a href="#" class="swiper-slide">[이벤트] 카카오톡 플러스친구 추가 시 5% 할인쿠폰</a>
+                <a href="#" class="swiper-slide">저작권 및 창작자 약관 개정고지(2021/01/18 시행)</a>
+                <a href="#" class="swiper-slide">[공지] 커스텀 서비스 안내</a>
+            </div> 
+        </div>
+    </div>         
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1>
+                    <a href="#">
+                        <img src="img/main_logo.png" alt="">
+                    </a>
+                </h1>
+                <div class="login">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">
+                        <img src="img/dog.png" alt="">
+                        <span>검색</span>
+                    </a>
+                </div>
+                <a class="menu_button" href="#">
+                    <p>MENU</p>
+                    <img src="img/black_arrow.png" alt="">
+                </a>
+            </div>
+        </header>
+        <div class="slide_menu">
+            <div class="inner">
+                <ul class="depth_01">
+                    <li>
+                        <a href="#">굿즈제작</a>
+                        <ul class="depth_02">
+                            <li><a href="#">빠른 굿즈제작</a></li>
+                            <li><a href="#">생생한 리뷰</a></li>
+                            <li><a href="#">인기제품</a></li>
+                            <li><a href="#">굿즈 제작사례</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">단체주문</a>
+                        <ul class="depth_02">
+                            <li><a href="#">소량주문제작</a></li>
+                            <li><a href="#">굿즈 선택</a></li>
+                            <li><a href="#">단체 주문사례</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">굿즈컨설팅</a>
+                        <ul class="depth_02">
+                            <li><a href="#">간편견적 문의</a></li>
+                            <li><a href="#">카카오톡 문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">리뷰</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main>
+            <section class="section_01">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/main_visual.png" alt="">
+                            <div>
+                                <h3>일상에서 즐기는 작은 즐거움,</h3>
+                                <h3>랄라베어 공식 굿즈</h3>
+                                <p>커스텀 기능으로 나만의 랄라베어 만들기!</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/main_visual_01.png" alt="">
+                            <div>
+                                <h3>지친 우리를 위한 파티</h3>
+                                <h3>파티물품 굿즈</h3>
+                                <p>단체 주문을 통해 파티 물품과 음식을 주문해보세요</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/main_visual_02.png" alt="">
+                            <div>
+                                <h3>TumBler</h3>
+                                <h3>No 플라스틱</h3>
+                                <h3>Only 스테인리스</h3>
+                                <p>이중 내열부터 보온 보냉에 탁월한 스테인리스<br>소재까지 용도에 맞게 선택할 수 있습니다</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/main_visual_03.png" alt="">
+                            <div>
+                                <h3>시원한 바다보면서 힐링하기</h3>
+                                <h3>바다의 날</h3>
+                                <p>By.에디터 H</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/main_visual_04.png" alt="">
+                            <div>
+                                <h3>위드굿즈에서 1번 이상 주문해봤다?</h3>
+                                <h3>단골고객님을 위한 상품권 기능 오픈 !</h3>
+                                <p>충전시 굿즈 무료 (15,000원) 쿠폰 증정</p>
+                            </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </section>
+            <section class="section_02">
+                <div class="inner">
+                    <div>
+                        <ul class="menu">
+                            <li class="on"><a href="#">마음을 적시는 빗소리</a></li>
+                            <li><a href="#">싱그러운 여름보내기</a></li>
+                            <li><a href="#">시원한 바다 보면서 힐링하기~</a></li>
+                            <li><a href="#">동물을 보호해요!</a></li>
+                            <li><a href="#">오비라거 마스코트 랄라베어</a></li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <div class="item on">
+                            <img src="img/bg1.png" alt="">
+                            <a href="#" class="info">
+                                <img src="img/item_01.png" alt="">
+                                <span>by 즈윤윤</span>
+                                <h4>내이름은 곽만춘</h4>
+                                <p>치얼스 비어캔 글라스</p>
+                                <strong>17,500원</strong>
+                            </a>
+                            <a href="#" class="info">
+                                <img src="img/item_02.png" alt="">
+                                <span>by Josign</span>
+                                <h4>비오는 날 개구리 패턴</h4>
+                                <p>우드 코스터 원형</p>
+                                <strong>12,000원</strong>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <img src="img/bg2.png" alt="">
+                            <a href="#" class="info">
+                                <img src="img/item_03.png" alt="">
+                                <span>by 씨솔</span>
+                                <h4>와이키키비치리조트</h4>
+                                <p>베이직 패브릭 포스터(세로형)</p>
+                                <strong>24,000원</strong>
+                            </a>
+                            <a href="#" class="info">
+                                <img src="img/item_04.png" alt="">
+                                <span>by 호왕</span>
+                                <h4>수박 냠! 글라스</h4>
+                                <p>위드 그랑 글라스</p>
+                                <strong>25,000원</strong>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <img src="img/bg3.png" alt="">
+                            <a href="#" class="info">
+                                <img src="img/item_05.png" alt="">
+                                <span>by wuilo</span>
+                                <h4>파도</h4>
+                                <p>하이볼 유리컵</p>
+                                <strong>15,000원</strong>
+                            </a>
+                            <a href="#" class="info">
+                                <img src="img/item_06.png" alt="">
+                                <span>by 유하</span>
+                                <h4>The wave</h4>
+                                <p>하이볼 유리컵</p>
+                                <strong>15,000원</strong>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <img src="img/bg4.png" alt="">
+                            <a href="#" href="#" class="info">
+                                <img src="img/item_07.png" alt="">
+                                <span>by 피리피리</span>
+                                <h4>복숭아 꿈 속 수달달</h4>
+                                <p>하이볼 유리컵</p>
+                                <strong>15,000원</strong>
+                            </a>
+                            <a href="#" class="info">
+                                <img src="img/item_08.png" alt="">
+                                <span>by nLoro</span>
+                                <h4>바다거북</h4>
+                                <p>하이볼 유리컵</p>
+                                <strong>15,000원</strong>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/bg5.png" alt="">
+                            <a href="#" class="info">
+                                <img src="img/item_09.png" alt="">
+                                <span>by 오비-라거</span>
+                                <h4>랄라베어 클래식</h4>
+                                <p>치얼스 비어캔 글라스</p>
+                                <strong>17,500원</strong>
+                            </a>
+                            <a href="#" class="info">
+                                <img src="img/item_10.png" alt="">
+                                <span>by 오비-라거</span>
+                                <h4>랄라베어 클래식</h4>
+                                <p>비어 유리컵</p>
+                                <strong>18,500원</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="bg">
+                        <img src="img/bg1.png" alt="">
+                        <img src="img/bg2.png" alt="">
+                        <img src="img/bg3.png" alt="">
+                        <img src="img/bg4.png" alt="">
+                        <img src="img/bg5.png" alt="">
+                    </div> -->
+                </div>
+
+            </section>
+            <section class="section_03">
+                <div class="inner">
+                    <div class="title">
+                        <h1>취향별 인기 굿즈</h1>
+                        <a href="#">전체보기</a>
+                    </div>
+                    <div class="cont">
+                        <div class="main">
+                            <a href="#">
+                                <img src="img/best_01.png" alt="">
+                            </a>
+                        </div>
+                        <div class="subs">
+                            <div class="on">
+                                <div>
+                                    <h4>당근과 레몬</h4>
+                                    <span>비어 유리컵 | 데일리 컬렉션</span>
+                                    <p>터키의 글라스웨어 제작사인 파사바체의 유리컵입니다.<br/>귀여운 당근과 레몬으로 지친 일상을 힐링하세요</p>
+                                </div>
+                                <a href="#">바로가기</a>
+                            </div>
+                            <div>
+                                <div>
+                                    <h4>테디베어와 친구들</h4>
+                                    <span>스퀘어 머그컵 | 머그컵</span>
+                                    <p>어린날의 기억을 담은 테디베어와 친구들입니다.</p>
+                                </div>
+                                <a href="#">바로가기</a>
+                            </div>
+                            <div>
+                                <div>
+                                    <h4>룡비</h4>
+                                    <span>라운드 머그컵 | 머그컵</span>
+                                    <p>신이나서 신나게 춤추는 귀여운 공룡 룡비</p>
+                                </div>
+                                <a href="#">바로가기</a>
+                            </div>
+                            <div>
+                                <div>
+                                    <h4>cinco de mayo</h4>
+                                    <span>베이직 쿠션 | 쿠션</span>
+                                    <p>cinco de mayo를 표현함~!!</p>
+                                </div>
+                                <a href="#">바로가기</a>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="small_image">
+                                        <img src="img/best_02.png" alt="">
+                                    </div>
+                                    <h4>테디베어와 친구들</h4>
+                                </div>
+                                <div>
+                                    <div class="small_image">
+                                        <img src="img/best_03.png" alt="">
+                                    </div>
+                                    <h4>룡비</h4>
+                                </div>
+                                <div>
+                                    <div class="small_image">
+                                        <img src="img/best_04.png" alt="">
+                                    </div>
+                                    <h4>cinco de mayo</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section_04">
+                <div class="inner">
+                    <div class="title">
+                        <h1>생생한 리뷰</h1>
+                        <a href="#">전체보기</a>
+                    </div>
+                    <div class="cont">
+                        <!-- <a href="#">
+                            <img src="img/review_01.jpg" alt="">
+                            <h4>캭 진짜 깜찍하고 너무 귀여워요. 유리컵 사이즈도 사용하기에 딱이예요.</h4>
+                            <p>나무인 캐릭터가 너무 귀여워서 사보았는데 이미지랑 실물 똑같고 색상조합이 이뻐요. 유리컵 튼튼해서 오래 사용할 수 있을 것 같아요....</p>
+                        </a>
+                        <div class="arealight"></div>
+                        <a href="#">
+                            <img src="img/review_02.png" alt="">
+                            <h4>배송이 빠르고 배개도 푹신하고 좋아여</h4>
+                            <p>배송도 문제없구 굿즈도 아주좋아여
+                            </p>
+                        </a>
+                        <a href="#">
+                            <img src="img/review_03.png" alt="">
+                            <h4>배송도 문의도 빨라요!</h4>
+                            <p>첫 제작이었는데 문의에 응답도 배송도 빨라서 넘 좋았습니다😎
+                            </p>
+                        </a> -->
+                        <div class="swiper mySwiper_02">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <a href="#">
+                                  <img src="img/review_01.jpg" alt="">
+                                  <h4>캭 진짜 깜찍하고 너무 귀여워요. 유리컵 사이즈도 사용하기에 딱이예요.</h4>
+                                  <p>나무인 캐릭터가 너무 귀여워서 사보았는데 이미지랑 실물 똑같고 색상조합이 이뻐요. 유리컵 튼튼해서 오래 사용할 수 있을 것 같아요....</p>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="#">
+                                  <img src="img/review_02.png" alt="">
+                                  <h4>배송이 빠르고 배개도 푹신하고 좋아여</h4>
+                                  <p>배송도 문제없구 굿즈도 아주좋아여
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="#">
+                                  <img src="img/review_03.png" alt="">
+                                  <h4>배송도 문의도 빨라요!</h4>
+                                  <p>첫 제작이었는데 문의에 응답도 배송도 빨라서 넘 좋았습니다😎
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="#">
+                                  <img src="img/review_04.png" alt="">
+                                  <h4>텀블러 너무 만족해요</h4>
+                                  <p>텀블러 활용도도 너무 좋고 무엇보다 디자인이 너무너무 맘에드네요 프린팅도 깔끔 해요!!!
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="#">
+                                  <img src="img/review_05.jpg" alt="">
+                                  <h4>문제없이 이쁘게 잘왔어요!</h4>
+                                  <p>배송도 빠르고 컵도 깨지거나 하지않고 안전하게 도착하고 이쁘내여!
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="#">
+                                  <img src="img/review_06.jpg" alt="">
+                                  <h4>이번에도 생일선물!</h4>
+                                  <p>완전 인쇄도 잘 나왔고 예쁘다고 해요! 특별한 생일선물~~
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="#">
+                                  <img src="img/review_07.png" alt="">
+                                  <h4>아침에 우유 먹기 딱!!</h4>
+                                  <p>아침에 우유먹을때 사용하기 너무 좋아요💚
+                                  </p>
+                                </a>
+                              </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </section>
+            <footer>
+                <a href="#">(주)공공공간</a>
+                <a href="#">사업자소개</a>
+                <a href="#">서비스 소개</a>
+                <a href="#">공지사항</a>
+                <a href="#">자주묻는질문</a>
+                <a href="#">이용약관</a>
+                <a href="#">저작권대리중개업</a>
+                <a href="#">표준업무규정</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">문의하기</a>
+            </footer>
+        </main>
+    </div>
+    
+  <script>
+    var swiper = new Swiper(".mySwiper_02", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper_03", {
+      direction : 'vertical',
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+
+
+</body>
+</html>
