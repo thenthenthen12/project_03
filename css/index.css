@@ -544,25 +544,12 @@ header .inner{
     transform: scale(1.2);
     transition: 0.5s;
 }
-/* .section_02 .inner .list .item::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff2f;
-    z-index: -1;
-} */
+
 .section_02 .inner .list .item{
     width: 100%;
     display: none;
     height: 100%;
 }
-
-
-
-
 
 .section_02 .inner .list .item.on:nth-child(1){
     background: #003176;
@@ -712,8 +699,6 @@ header .inner{
     border: 1px solid #0e0e44;
     overflow: hidden;
     height: 240px;
-
-
 }
 .section_03 .inner .cont .subs > div:last-child div img{
     width: 100%;
@@ -733,7 +718,6 @@ header .inner{
     background: #99c2fe;
     color: #fff;
     border: 1px solid #0e0e44;
-
 }
 
 /* ------------------💛section_03 시작💛-------------------- */
@@ -797,9 +781,6 @@ header .inner{
     opacity: 1;
 }
 .section_04 .inner .cont{
-    /* display: flex;
-    justify-content: space-between;
-    position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -877,11 +858,3 @@ footer a{
 footer a:hover{
     color: #003176;
 }
-
-
-
-
-
-
-
-  
